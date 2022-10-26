@@ -27,12 +27,13 @@ class Plant
   end
 end
 
-lawn = Garden.new(name: 'Front Lawn')
+lawn = Garden.new(name: 'Front Lawn') # we can call Garden.new because Garden is defined above
 
-basil = Plant.new(name: 'Basil')
+basil = Plant.new(name: 'Basil') # we can call Plant.new because Plant is defined above
 basil.garden = lawn
 
 cucumber = Plant.new(name: 'Cucumber')
-cucumber.garden = lawn
+cucumber.garden = lawn # we can associate a plant and a garden because both are defined above
 
 p lawn.plants
+# => [#<Plant:0x00007fa4440ab0c8 @name="Basil", @garden=#<Garden:0x00007fa4440997b0 @name="Front Lawn">>, #<Plant:0x00007fa4440b8bd8 @name="Cucumber", @garden=#<Garden:0x00007fa4440997b0 @name="Front Lawn">>]
